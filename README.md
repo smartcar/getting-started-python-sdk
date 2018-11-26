@@ -14,7 +14,13 @@ $ export CLIENT_SECRET=<your-client-secret>
 $ export REDIRECT_URI=<your-redirect-uri>
 ```
 
-To install the required dependencies and run this Node app -
+Make sure you have cloned this repo -
+```bash
+$ git clone git@github.com:smartcar/getting-started-python-sdk.git
+$ cd getting-started-python-sdk
+```
+
+To install the required dependencies and run this Python app -
 ```bash
 $ pip install -r requirements.txt
 $ python main.py
@@ -26,3 +32,5 @@ Once your server is up and running, you can authenticate your vehicle. In our cu
 
 ## Next Steps
 Read our [API Docs](https://smartcar.com/docs) to learn what else you can do with Smartcar's API.
+
+Learn more about the [Python SDK](https://github.com/smartcar/python-sdk) and how it can be used.
