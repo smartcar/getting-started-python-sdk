@@ -10,12 +10,12 @@ CORS(app)
 # global variable to save our access_token
 access = None
 
-# TODO: Authorization Step 1: Launch Smartcar authorization dialog
+# TODO: Authorization Step 1a: Launch Smartcar authorization dialog
 
 
 @app.route('/login', methods=['GET'])
 def login():
-    # TODO: Authorization Step 1: Launch Smartcar authorization dialog
+    # TODO: Authorization Step 1b: Launch Smartcar authorization dialog
 
 
 @app.route('/exchange', methods=['GET'])
