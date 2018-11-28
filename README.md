@@ -11,7 +11,6 @@ Then, we can set these as environment variables -
 ```bash
 $ export CLIENT_ID=<your-client-id>
 $ export CLIENT_SECRET=<your-client-secret>
-$ export REDIRECT_URI=<your-redirect-uri>
 ```
 
 Make sure you have cloned this repo -
