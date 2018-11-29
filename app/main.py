@@ -13,7 +13,7 @@ access = None
 client = smartcar.AuthClient(
     client_id=os.environ.get('CLIENT_ID'),
     client_secret=os.environ.get('CLIENT_SECRET'),
-    redirect_uri='http://localhost:8000/exchange',
+    redirect_uri=os.environ.get('REDIRECT_URI'),
     scope=['read_vehicle_info'],
     test_mode=True
 )

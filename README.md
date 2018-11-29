@@ -11,6 +11,7 @@ Then, we can set these as environment variables -
 ```bash
 $ export CLIENT_ID=<your-client-id>
 $ export CLIENT_SECRET=<your-client-secret>
+$ export REDIRECT_URI=http://localhost:8000/exchange
 ```
 
 Make sure you have cloned this repo -
