@@ -16,7 +16,7 @@ $ export REDIRECT_URI=http://localhost:8000/exchange
 
 Make sure you have cloned this repo -
 ```bash
-$ git clone git@github.com:smartcar/getting-started-python-sdk.git
+$ git clone https://github.com/smartcar/getting-started-node-sdk.git
 $ cd getting-started-python-sdk/app
 ```
 
