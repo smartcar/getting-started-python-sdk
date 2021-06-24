@@ -9,9 +9,9 @@ Before we get started, create an application on Smartcar's Developer Dashboard t
 
 Then, we can set these as environment variables -
 ```bash
-$ export CLIENT_ID=<your-client-id>
-$ export CLIENT_SECRET=<your-client-secret>
-$ export REDIRECT_URI=http://localhost:8000/exchange
+$ export SMARTCAR_CLIENT_ID=<your-client-id>
+$ export SMARTCAR_CLIENT_SECRET=<your-client-secret>
+$ export SMARTCAR_REDIRECT_URI=http://localhost:8000/exchange
 ```
 
 Make sure you have cloned this repo -
@@ -19,6 +19,9 @@ Make sure you have cloned this repo -
 $ git clone https://github.com/smartcar/getting-started-python-sdk.git
 $ cd getting-started-python-sdk/app
 ```
+
+**Note:** We recommend you use a virtual environment. Refer to [this guide](https://docs.python.org/3/tutorial/venv.html). 
+
 
 To install the required dependencies and run this Python app -
 ```bash
@@ -28,7 +31,7 @@ $ python main.py
 
 Once your server is up and running, you can authenticate your vehicle. In our current set up, we are using Smartcar's [test mode](https://smartcar.com/docs/guides/testing/), so you can log in with any username and password. To authenticate, navigate to `http://localhost:8000/login`. Once you have authenticated, go to `http://localhost:8000/vehicle` to see your vehicle information.
 
-**Note:** We recommend you use a virtual environment. If you are using Python 3, refer to [this guide](https://docs.python.org/3/tutorial/venv.html). If you are using Python 2, refer to the [docs](https://virtualenv.pypa.io).
+
 
 ## Next Steps
 Read our [API Docs](https://smartcar.com/docs/api) to learn what else you can do with Smartcar's API.
