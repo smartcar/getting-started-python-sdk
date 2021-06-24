@@ -30,7 +30,7 @@ def login():
 
 
 @app.route('/exchange', methods=['GET'])
-def exchange():
+def exchange_code():
     code = request.args.get('code')
 
     # access our global variable and store our access tokens
@@ -43,15 +43,15 @@ def exchange():
 
 
 @app.route('/vehicle', methods=['GET'])
-def vehicle():
+def get_vehicle():
     # access our global variable to retrieve our access tokens
     global access
 
     # receive a `Vehicles` NamedTuple, which has an attribute of 'vehicles' and 'meta'
-    V = smartcar.get_vehicle_ids(access['access_token'])
+    result = smartcar.get_vehicle_ids(access['access_token'])
 
     # get the first vehicle
-    id_of_first_vehicle = V.vehicles[0]
+    id_of_first_vehicle = result.vehicles[0]
 
     # instantiate the first vehicle in the vehicle id list
     vehicle = smartcar.Vehicle(id_of_first_vehicle, access['access_token'])
