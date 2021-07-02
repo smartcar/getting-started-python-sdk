@@ -48,31 +48,23 @@ def get_vehicle():
     global access
 
     # receive a `Vehicles` NamedTuple, which has an attribute of 'vehicles' and 'meta'
-    result = smartcar.get_vehicle_ids(access['access_token'])
+    result = smartcar.get_vehicle_ids(access.access_token)
 
     # get the first vehicle
     id_of_first_vehicle = result.vehicles[0]
 
     # instantiate the first vehicle in the vehicle id list
-    vehicle = smartcar.Vehicle(id_of_first_vehicle, access['access_token'])
+    vehicle = smartcar.Vehicle(id_of_first_vehicle, access.access_token)
 
     # use the attributes() method to call to Smartcar API and get information about the vehicle.
     # These vehicle methods return NamedTuples with attributes
     attributes = vehicle.attributes()
 
-    # play around with the info attributes
-    print(attributes.make)
-    print(attributes.model)
-    print(attributes.year)
-
-    # Check out the meta attribute,
-    # which contains the response headers (and other information) about the request
-    print(attributes.meta)
-
-    # NamedTuples can be transformed into a dictionary
-    attributes_dict = attributes._asdict()
-
-    return jsonify(attributes_dict)
+    return jsonify({
+        "make": attributes.make,
+        "model": attributes.model,
+        "year" : attributes.year
+    })
 
 
 if __name__ == '__main__':
