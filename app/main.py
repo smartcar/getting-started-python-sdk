@@ -20,18 +20,18 @@ access = None
 client = smartcar.AuthClient(test_mode=True)
 
 # scope of permissions
-scope = ['read_vehicle_info']
+scope = ["read_vehicle_info"]
 
 
-@app.route('/login', methods=['GET'])
+@app.route("/login", methods=["GET"])
 def login():
     auth_url = client.get_auth_url(scope)
     return redirect(auth_url)
 
 
-@app.route('/exchange', methods=['GET'])
+@app.route("/exchange", methods=["GET"])
 def exchange_code():
-    code = request.args.get('code')
+    code = request.args.get("code")
 
     # access our global variable and store our access tokens
     global access
@@ -39,10 +39,10 @@ def exchange_code():
     # in a production app you'll want to store this in some kind of
     # persistent storage
     access = client.exchange_code(code)
-    return '', 200
+    return "", 200
 
 
-@app.route('/vehicle', methods=['GET'])
+@app.route("/vehicle", methods=["GET"])
 def get_vehicle():
     # access our global variable to retrieve our access tokens
     global access
@@ -60,12 +60,10 @@ def get_vehicle():
     # These vehicle methods return NamedTuples with attributes
     attributes = vehicle.attributes()
 
-    return jsonify({
-        "make": attributes.make,
-        "model": attributes.model,
-        "year" : attributes.year
-    })
+    return jsonify(
+        {"make": attributes.make, "model": attributes.model, "year": attributes.year}
+    )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(port=8000)
