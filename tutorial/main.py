@@ -13,14 +13,14 @@ access = None
 # TODO: Authorization Step 1a: Launch Smartcar authorization dialog
 
 
-@app.route('/login', methods=['GET'])
+@app.route("/login", methods=["GET"])
 def login():
     # TODO: Authorization Step 1b: Launch Smartcar authorization dialog
 
     pass
 
 
-@app.route('/exchange', methods=['GET'])
+@app.route("/exchange", methods=["GET"])
 def exchange():
     # TODO: Authorization Step 3: Handle Smartcar response
 
@@ -29,7 +29,7 @@ def exchange():
     pass
 
 
-@app.route('/vehicle', methods=['GET'])
+@app.route("/vehicle", methods=["GET"])
 def vehicle():
     # TODO: Request Step 2: Get vehicle ids
 
@@ -40,5 +40,5 @@ def vehicle():
     pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(port=8000)
