@@ -1,4 +1,3 @@
-from distutils.log import debug
 import smartcar
 from flask import Flask, redirect, request, jsonify
 from flask_cors import CORS
