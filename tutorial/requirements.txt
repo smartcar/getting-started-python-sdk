@@ -2,3 +2,4 @@ Flask==2.0.1
 Flask-Cors==3.0.10
 requests==2.25.1
 smartcar==6.3.0
+werkzeug==2.3.8
